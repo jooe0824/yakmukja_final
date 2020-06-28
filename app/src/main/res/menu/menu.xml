@@ -1,0 +1,16 @@
+<menu  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    <item-->
+<!--        android:id="@+id/action_search"-->
+<!--        android:title="검색"-->
+<!--        app:showAsAction="ifRoom|collapseActionView"-->
+<!--        app:actionViewClass="android.widget.SearchView"/>-->
+
+    <item android:id="@+id/gotohome"
+        android:title="약 묵 자"
+        android:icon="@drawable/home2"
+        app:showAsAction="always" />
+
+
+
+</menu>

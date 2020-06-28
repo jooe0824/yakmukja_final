@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    tools:context="org.techtown.mediclock.Mainmenu">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알람 설정"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="385dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/mymediweek"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="361dp"
+        android:layout_height="318dp"
+        android:stretchColumns="0, 1, 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.2">/>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/mon"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:background="@drawable/pr_button_week"
+                android:gravity="center"
+                android:text="월"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/tue"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:background="@drawable/pr_button_week"
+                android:gravity="center"
+                android:text="화"
+                android:textSize="50sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/wed"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:background="@drawable/pr_button_week"
+                android:gravity="center"
+                android:text="수"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/thur"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:background="@drawable/pr_button_week"
+                android:gravity="center"
+                android:text="목"
+                android:textSize="50sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/fri"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:background="@drawable/pr_button_week"
+                android:gravity="center"
+                android:text="금"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/sat"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:background="@drawable/pr_button_week"
+                android:gravity="center"
+                android:text="토"
+                android:textSize="50sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/sun"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:background="@drawable/pr_button_week"
+                android:gravity="center"
+                android:text="일"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/everyday"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:background="@drawable/pr_button_week"
+                android:gravity="center"
+                android:text="매일"
+                android:textSize="50sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/confirmweek_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.456" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

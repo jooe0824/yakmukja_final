@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="org.techtown.mediclock">
+
+<uses-sdk />
+
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.CAMERA" /> <!-- 카메라 권한 -->
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 저장소 읽기 권한 -->
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+<application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    android:usesCleartextTraffic="true">
+    <activity android:name=".EffectinfoActivity"></activity>
+    <activity android:name=".BasicinfoActivity" />
+    <activity android:name=".TextresultActivity" />
+    <activity android:name=".Mainmenu">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".CustomScannerActivity" />
+    <activity
+        android:name=".AnyOrientationCaptureActivity"
+        android:screenOrientation="fullSensor"
+        android:stateNotNeeded="true"
+        android:theme="@style/zxing_CaptureTheme"
+        android:windowSoftInputMode="stateAlwaysHidden" />
+    <activity android:name=".alarmsetlist" />
+    <activity android:name=".CodeAlarmlist" />
+    <activity android:name=".Show_morning" />
+    <activity android:name=".BarcodeActivity" />
+    <activity android:name=".AlarmList" />
+    <activity android:name=".Description" />
+    <activity android:name=".Howtouse" />
+    <activity android:name=".TimePickerAlarm" />
+    <activity android:name=".Introduction" />
+    <activity android:name=".Mymeditime_min" />
+    <activity android:name=".Medialarm" />
+    <activity
+        android:name=".Medimorning"
+        android:configChanges="orientation|keyboardHidden" />
+    <activity android:name=".Mediname" />
+    <activity android:name=".Medirepeat" />
+    <activity android:name=".Meditime" />
+    <activity android:name=".Mediweek" />
+    <activity android:name=".Mediweekdays" />
+    <activity android:name=".Mymeditime_hour" />
+    <activity android:name=".Search_List" />
+    <activity android:name=".SearchActivity" />
+    <activity android:name=".SeecodeActivity" />
+    <activity android:name=".ShareActivity" />
+    <activity android:name=".ShareAlarm" />
+    <activity android:name=".WritecodeActivity" />
+    <activity android:name=".Search_Text" />
+    <activity
+        android:name=".Search_Photo"
+        android:configChanges="orientation|keyboardHidden" /> <!-- 화면 회전시 데이터 새로고침 방지 -->
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="org.techtown.mediclock.fileprovider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_paths" />
+    </provider>
+
+    <receiver
+        android:name=".DeviceBootReceiver"
+        android:enabled="false">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+        </intent-filter>
+    </receiver>
+    <receiver android:name=".AlarmReceiver" />
+</application>
+
+</manifest>
